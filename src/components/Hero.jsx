@@ -36,6 +36,17 @@ function Counter({ value, suffix }) {
   )
 }
 
+/**
+ * Vite rewrites root-relative URLs in HTML and CSS, but not ones written as JS
+ * strings — so a `/photo.jpg` in content.js would point at the domain root and
+ * 404 on a project Pages site. Prefix it with the configured base ourselves.
+ * Absolute URLs (https://…) and relative paths are passed through untouched.
+ */
+function resolveAsset(path) {
+  if (!path || !path.startsWith('/')) return path
+  return `${import.meta.env.BASE_URL.replace(/\/$/, '')}${path}`
+}
+
 const rise = (delay) => ({
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
@@ -146,7 +157,7 @@ export default function Hero() {
             <div className="card relative aspect-[4/5] overflow-hidden rounded-[2rem]">
               {profile.avatar && !avatarFailed ? (
                 <img
-                  src={profile.avatar}
+                  src={resolveAsset(profile.avatar)}
                   alt={`Portrait of ${profile.name}`}
                   width="400"
                   height="500"
