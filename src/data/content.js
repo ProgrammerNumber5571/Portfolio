@@ -65,6 +65,17 @@ export const services = [
 export const projects = [
   {
     id: '01',
+    name: 'Kiln & Clay',
+    category: 'WordPress / Booking',
+    year: '2026',
+    blurb:
+      'A ceramics studio site on a custom block theme, with a hand-built plugin for workshop listings and live seat bookings. Runs locally in one command.',
+    tools: ['WordPress', 'PHP', 'Block Themes', 'Block Bindings', 'JavaScript', 'Playground'],
+    href: 'https://github.com/ProgrammerNumber5571/kiln-studio-wp',
+    accent: '#D9774C',
+  },
+  {
+    id: '02',
     name: 'Backrooms',
     category: 'E-Commerce / Music',
     year: '2026',
@@ -75,7 +86,7 @@ export const projects = [
     accent: '#A855F7',
   },
   {
-    id: '02',
+    id: '03',
     name: 'Atlas Dashboard',
     category: 'SaaS / Data',
     year: '2025',
@@ -86,7 +97,7 @@ export const projects = [
     accent: '#4F9BFF',
   },
   {
-    id: '03',
+    id: '04',
     name: 'Northwind Studio',
     category: 'Marketing Site',
     year: '2025',
@@ -97,7 +108,7 @@ export const projects = [
     accent: '#C6F24E',
   },
   {
-    id: '04',
+    id: '05',
     name: 'Ledgerly',
     category: 'Fintech / Tooling',
     year: '2024',
@@ -152,6 +163,8 @@ export const stack = [
   'Git',
   'GitHub',
   'Vercel',
+  'WordPress',
+  'PHP',
   'Figma',
   'Postman',
   'Vitest',

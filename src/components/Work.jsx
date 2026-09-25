@@ -27,6 +27,9 @@ export default function Work() {
             <Reveal key={project.id} delay={0.05 * i}>
               <a
                 href={project.href}
+                {...(/^https?:\/\//.test(project.href)
+                  ? { target: '_blank', rel: 'noopener noreferrer' }
+                  : {})}
                 onMouseEnter={() => setHovered(project.id)}
                 onMouseLeave={() => setHovered(null)}
                 className="group relative block border-b border-white/[0.07] py-8 transition-colors sm:py-10"
