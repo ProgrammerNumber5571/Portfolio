@@ -69,9 +69,9 @@ export const projects = [
     category: 'WordPress / Booking',
     year: '2026',
     blurb:
-      'A ceramics studio site on a custom block theme, with a hand-built plugin for workshop listings and live seat bookings. Runs locally in one command.',
+      'A ceramics studio site on a custom block theme, with a hand-built plugin for workshop listings and live seat bookings. The live demo runs the real site in your browser.',
     tools: ['WordPress', 'PHP', 'Block Themes', 'Block Bindings', 'JavaScript', 'Playground'],
-    href: 'https://github.com/ProgrammerNumber5571/kiln-studio-wp',
+    href: 'https://programmernumber5571.github.io/kiln-studio-wp/',
     accent: '#D9774C',
   },
   {
